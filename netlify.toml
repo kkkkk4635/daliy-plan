@@ -1,0 +1,13 @@
+[build]
+  command = "npm install --no-audit --no-fund --legacy-peer-deps && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NETLIFY_USE_PNPM = "false"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
